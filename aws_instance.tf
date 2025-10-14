@@ -1,18 +1,18 @@
 # EC2 Instance 1 - Amazon Linux 2
-# resource "aws_instance" "amazon_linux" {
-#   ami                    = data.aws_ami.amazon_linux.id
-#   instance_type          = "t2.micro"
-#   key_name               = aws_key_pair.demo_key.key_name
-#   vpc_security_group_ids = [aws_security_group.demo_sg.id]
-#   subnet_id              = data.aws_subnet.default.id
+resource "aws_instance" "amazon_linux" {
+  ami                    = data.aws_ami.amazon_linux.id
+  instance_type          = "t2.micro"
+  key_name               = aws_key_pair.demo_key.key_name
+  vpc_security_group_ids = [aws_security_group.demo_sg.id]
+  subnet_id              = data.aws_subnet.default.id
 
-#   tags = {
-#     Name    = "${var.project_name}-amazon-linux-${random_id.instance_suffix[0].hex}"
-#     Project = var.project_name
-#     OS      = "Amazon Linux 2"
-#     Managed = "terraform"
-#   }
-# }
+  tags = {
+    Name    = "${var.project_name}-amazon-linux-${random_id.instance_suffix[0].hex}"
+    Project = var.project_name
+    OS      = "Amazon Linux 2"
+    Managed = "terraform"
+  }
+}
 
 # EC2 Instance 2 - Ubuntu 22.04
 resource "aws_instance" "ubuntu" {
@@ -63,17 +63,17 @@ resource "aws_instance" "centos" {
 }
 
 # EC2 Instance 5 - Fedora
-# resource "aws_instance" "fedora" {
-#   ami                    = data.aws_ami.fedora.id
-#   instance_type          = "t2.micro"
-#   key_name               = aws_key_pair.demo_key.key_name
-#   vpc_security_group_ids = [aws_security_group.demo_sg.id]
-#   subnet_id              = data.aws_subnet.default.id
+resource "aws_instance" "fedora" {
+  ami                    = data.aws_ami.fedora.id
+  instance_type          = "t2.micro"
+  key_name               = aws_key_pair.demo_key.key_name
+  vpc_security_group_ids = [aws_security_group.demo_sg.id]
+  subnet_id              = data.aws_subnet.default.id
 
-#   tags = {
-#     Name    = "${var.project_name}-fedora-${random_id.instance_suffix[4].hex}"
-#     Project = var.project_name
-#     OS      = "Fedora"
-#     managed = "terraform"
-#   }
-# }
+  tags = {
+    Name    = "${var.project_name}-fedora-${random_id.instance_suffix[4].hex}"
+    Project = var.project_name
+    OS      = "Fedora"
+    managed = "terraform"
+  }
+}
