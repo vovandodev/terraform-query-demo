@@ -23,6 +23,7 @@ Demo of Terraform v1.14.0's new `terraform query` command and needed `.tfquery.h
    # First, comment out the Amazon Linux instance in aws_instance.tf
    # Then remove it from Terraform state
    terraform state rm aws_instance.amazon_linux
+   terraform state rm aws_instance.fedora
    ```
 
 4. **Search for instances**:
