@@ -13,7 +13,16 @@ terraform {
   }
 
   # Local state backend
-  backend "local" {
-    path = "terraform.tfstate"
+  # backend "local" {
+  #   path = "terraform.tfstate"
+  # }
+
+  # HCP Terraform backend
+  backend "remote" {
+    organization = "vvrubl-hashicorp"
+
+    workspaces {
+      name = "terraform-query-demo"
+    }
   }
 }
