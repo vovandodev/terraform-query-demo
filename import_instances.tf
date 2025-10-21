@@ -4,7 +4,7 @@ import {
   provider = aws
   identity = {
     account_id = "533284743133"
-    id         = "i-0cc773dc5a61c03db"
+    id         = "i-05cadb4a78330f8df"
     region     = "us-west-2"
   }
 }
@@ -100,7 +100,7 @@ import {
   provider = aws
   identity = {
     account_id = "533284743133"
-    id         = "i-09478fd0b99179754"
+    id         = "i-0169ad0acbc4a65cc"
     region     = "us-west-2"
   }
 }
